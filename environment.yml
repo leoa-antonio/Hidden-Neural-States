@@ -1,0 +1,12 @@
+name: hidden-neural-states
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy
+  - scipy
+  - scikit-learn
+  - matplotlib
+  - pandas
+  - jupyter
+  - ipykernel
