@@ -21,7 +21,3 @@ def damped_rotation_matrix(theta, r):
         raise ValueError("r must satisfy 0 <= r <= 1")
     return r * rotation_matrix(theta)
 
-theta = 45
-r = 20
-print(damped_rotation_matrix(theta, r))
-
