@@ -1,7 +1,7 @@
-import numpy as np;
+import numpy as np
 
 def simulate_linear_system(A, x0, T):
-    x_prev = x0;
+    x_prev = x0
     X = np.zeros((T+1, x0.shape[0]))
     X[0] = x0
     for i in range(T):
