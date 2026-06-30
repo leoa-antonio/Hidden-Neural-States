@@ -4,14 +4,18 @@ Neural activity is typically high-dimensional and noisy making it very difficult
 
 The goal of this project is to simulate a hidden dynamical system, generate noisy data from it, and then attempt to recover the underlying latent structure using PCA, SVD, and state-space modeling. Ultimately, it aims to recover the neural dynamics from high-dimensional and noisy neural data.
 ## Core Idea
-The project begins with a low dimensional state: $x_t = \text{ hidden neural state}. This state evolves according to linear dynamics described by the equation:<br> 
+The project begins with a low dimensional state: $x_t = \text{ hidden neural state}$. This state evolves according to linear dynamics described by the equation:
+
 $$
 x_{t+1} = Ax_{t} + w_{t}
-$$<br> 
-A simulated neural population then observes this state through a noisy linear readout:<br>
+$$
+
+A simulated neural population then observes this state through a noisy linear readout:
+
 $$
 y_{t} = Cx_{t} + \varepsilon_{t}
-$$<br>
+$$
+
 where<br>
 - $x_t$ is the low dimensional hidden state
 - $A$ controls the dynamics
