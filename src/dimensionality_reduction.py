@@ -11,7 +11,7 @@ def run_svd(Y):
     mean = np.mean(Y, axis=0)
     Y_centered = Y - mean
     
-    U, S, Vt, mean = linalg.svd(Y_centered, full_matrices=False)
+    U, S, Vt = linalg.svd(Y_centered, full_matrices=False)
     return U, S, Vt, mean
 
 def compute_variance_explained(singular_values):
