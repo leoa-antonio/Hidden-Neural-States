@@ -4,7 +4,7 @@ import scipy.linalg as la
 def reconstruction_error(Y_true, Y_hat):
     if Y_true.shape != Y_hat.shape:
         raise ValueError(f"Y_true and Y_hat must have the same shape, but was given {Y_true.shape} and {Y_hat.shape}")
-    return np.mean(Y_true - Y_hat) ** 2
+    return np.mean((Y_true - Y_hat) ** 2)
 
 def subspace_similarity(X, Z_pca):
     if X.shape[0] != Z_pca.shape[0]:
@@ -52,4 +52,7 @@ def correlation_with_latent_state(X, Z_pca):
     
     return R
 
-
+def mean_max_latent_correlation(X, Z_pca):
+    R = correlation_with_latent_state(X, Z_pca)
+    max_correlations = np.max(np.abs(R), axis=1)
+    return np.mean(max_correlations)
