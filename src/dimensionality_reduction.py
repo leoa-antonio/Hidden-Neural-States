@@ -22,5 +22,4 @@ def compute_variance_explained(singular_values):
 def reconstruct_from_pca(Z_pca, pca_model):
     return pca_model.inverse_transform(Z_pca)
 
-def reconstruction_error(Y_true, Y_reconstructed):
-    return np.mean((Y_true - Y_reconstructed) ** 2)
+   
